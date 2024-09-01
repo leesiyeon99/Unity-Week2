@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject); //새로운 씬을 로딩하더라도 지워지지않음
         }
         //싱글톤이 있었으면 => 지금 만든 인스턴스를 삭제
         else
